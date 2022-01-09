@@ -142,7 +142,12 @@ export class Gradient {
   setCanvasSize(width, height, initial = true) {
     (this.width = width),
       (this.height = height),
-      this.minigl.setSize(1024, 600, this.width, this.height),
+      this.minigl.setSize(
+        Math.min(1024, this.width),
+        Math.min(this.height, 600),
+        this.width,
+        this.height
+      ),
       this.minigl.setOrthographicCamera(),
       initial &&
         (this.xSegCount = Math.ceil(this.width * this.conf.density[0])),
