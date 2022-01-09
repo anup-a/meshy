@@ -1,4 +1,4 @@
-<img src="./public/logo.png" alt="logo" width="100"/>
+<img src="./public/logo.png" alt="logo" width="200"/>
 
 ---
 
@@ -8,7 +8,8 @@
 
 `Generate beautiful mesh gradients.`
 
-Meshy is a design tool to generate beautiful & colorful mesh gradients. Generate multiple random variations of Mesh gradients along with cool color customizations.
+Meshy is a design tool to generate beautiful & colorful mesh gradients. Generate multiple random variations of Mesh gradients along with cool color customizations. Export PNG image with custom resolution.
+
 
 
 > Built with Svelte + Vite + Sass
