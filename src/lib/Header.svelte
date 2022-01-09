@@ -10,6 +10,9 @@
       <p>Mesh·y</p>
     </div>
     <div class="top-right-logo">
+      <a href="https://github.com/anup-a/meshy" target="_blank"
+        ><span>Github</span></a
+      >
       <a href="https://uxie.io">By <span>UXIE·io</span></a>
       <img id="triangle-img" src={triangleImg} alt="3d sphere" />
     </div>
@@ -31,6 +34,9 @@
       height: 100%;
       align-items: center;
 
+      @media (min-width : #{$x-large-width}) {
+        top: -16px;
+      }
       .top-logo {
         display: flex;
         align-items: center;
@@ -86,6 +92,7 @@
       font-size: xx-large;
       letter-spacing: 0.1mm;
       font-weight: 600;
+      margin-bottom: 1.5rem;
     }
 
     @include large {
@@ -95,9 +102,15 @@
       }
     }
 
+    @include medium-only {
+      .top-img-container {
+        top: -16px;
+      }
+    }
+
     @include medium {
       .heading-text {
-        margin-top: 2.5rem;
+        margin-top: 4.5rem;
         font-size: x-large;
       }
     }
@@ -141,6 +154,26 @@
     }
 
     @include small {
+      .top-img-container {
+        .top-logo {
+          p {
+            margin-left: 1rem;
+          }
+          #sphere-img {
+            margin-left: 1.3rem;
+          }
+        }
+        .top-right-logo {
+          a {
+            font-size: 12px;
+            margin-right: 0.5rem;
+          }
+          #triangle-img {
+            margin-right: 1rem;
+            margin-left: 1rem;
+          }
+        }
+      }
       .heading-text {
         text-align: center;
         font-size: medium;
