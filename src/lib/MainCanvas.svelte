@@ -61,6 +61,8 @@
 
       #gradient-canvas {
         width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
       }
     }
 
