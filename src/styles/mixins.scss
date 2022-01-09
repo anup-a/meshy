@@ -1,0 +1,72 @@
+@mixin center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin extra-small {
+    @media (max-width: #{$small-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin small-down {
+    @media (max-width: #{$medium-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin small-only {
+    @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin small {
+    @media (max-width: #{$small-width}) {
+      @content;
+    }
+  }
+
+  @mixin phone {
+    @media (max-width: #{$regular-width}) {
+      @content;
+    }
+  }
+
+  @mixin tablet {
+    @media (max-width: #{$medium-width}) {
+      @content;
+    }
+  }
+  
+  @mixin medium-only {
+    @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin medium {
+    @media (max-width: #{$large-width}) {
+      @content;
+    }
+  }
+
+  @mixin large-only {
+    @media (min-width: #{$large-width}) and (max-width: #{$x-large-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin large {
+    @media (max-width: #{$x-large-width - 1px}) {
+      @content;
+    }
+  }
+
+  @mixin x-large {
+      @media (min-width: #{$x-large-width}){
+          @content;
+      }
+  }
+  

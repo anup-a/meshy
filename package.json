@@ -1,0 +1,22 @@
+{
+  "name": "meshy",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "sass": "^1.45.1",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1",
+    "vite": "^2.7.1"
+  },
+  "dependencies": {
+    "dino-color-picker": "^0.2.3",
+    "file-saver": "^2.0.5",
+    "svelte-range-slider-pips": "^2.0.0"
+  }
+}
