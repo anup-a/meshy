@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="btn-grp">
-        <div>{width[0]} px X {height[0]}px</div>
+        <div>{width[0]}px X {height[0]}px</div>
         <button class="btn btn-download" on:click={() => downloadPng()}>
           <p>Download PNG</p>
           <img src={imgIcon} alt="icon for png" width="20px" />
