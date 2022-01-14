@@ -99,6 +99,18 @@
     border: 1px solid #888;
     border-radius: 8px;
     width: 40%; /* Could be more or less, depending on screen size */
+
+    @include medium {
+      width: 60%;
+    }
+
+    @include phone {
+      width: 70%;
+    }
+
+    @include small {
+      width: 90%;
+    }
   }
 
   .close {

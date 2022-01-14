@@ -1,6 +1,7 @@
 <script>
   import Main from "./lib/Main.svelte";
   import PreviewList from "./lib/PreviewList.svelte";
+  import "./../lib/webcomponent/float-menu";
 
   $: innerWidth = 0;
   let widthBreakpoint = 1024;
@@ -9,6 +10,7 @@
 <svelte:window bind:innerWidth />
 
 <div id="container">
+  <float-menu id="float-menu" />
   <Main />
   {#if innerWidth > widthBreakpoint}
     <PreviewList />
@@ -28,6 +30,14 @@
       height: 100%;
       overflow: visible;
       flex-direction: column;
+    }
+
+    #float-menu {
+      z-index: 50;
+      height: 0;
+      display: block;
+      position: absolute;
+      top: 20%;
     }
   }
 </style>
