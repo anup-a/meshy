@@ -29,6 +29,17 @@
 </script>
 
 <div id="preview-list">
+  <a
+    class="buy-coffee"
+    href="https://www.buymeacoffee.com/anup"
+    target="_blank"
+    style="height: 50px !important;"
+    ><img
+      src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+      alt="Buy Me A Coffee"
+      style="height: 50px !important;"
+    /></a
+  >
   {#each allPresetImages as imgSrc, idx}
     <img
       class="img-1"
@@ -66,6 +77,10 @@
       border-radius: 4px;
       padding-bottom: 0;
       background-color: rgb(32, 32, 32);
+
+      a {
+        display: none;
+      }
 
       img {
         width: 250px;
