@@ -12,7 +12,6 @@ export const resetCanvas = () => {
 
 export const changeCanvasSize = (width, height) => {
   const canvasEl = document.getElementById("gradient-canvas");
-  console.log(canvasEl);
   //@ts-ignore
   canvasEl.width = width;
   //@ts-ignore

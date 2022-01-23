@@ -17,8 +17,6 @@
   let highlightGenBtn = false;
   let showDownloadModal = false;
 
-  console.log(showDownloadModal);
-
   const changeGradientId = (e) => {
     const inputStr = e.target.value;
     const value = Number.parseInt(inputStr);
@@ -57,7 +55,6 @@
 
   const handleSaveBtnClick = () => {
     showDownloadModal = true;
-    console.log(showDownloadModal);
   };
 </script>
 
