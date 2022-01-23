@@ -7,7 +7,7 @@
   <div class="top-img-container">
     <div class="top-logo">
       <img id="sphere-img" src={sphereImg} alt="3d sphere" />
-      <p>Mesh·y</p>
+      <h2>Mesh·y</h2>
     </div>
     <div class="top-right-logo">
       <a href="https://github.com/anup-a/meshy" target="_blank"
@@ -28,7 +28,7 @@
       <img id="triangle-img" src={triangleImg} alt="3d sphere" />
     </div>
   </div>
-  <p class="heading-text">Generate beautiful mesh gradients</p>
+  <h1 class="heading-text">Generate beautiful mesh gradients</h1>
 </div>
 
 <style lang="scss">
@@ -51,7 +51,7 @@
       .top-logo {
         display: flex;
         align-items: center;
-        p {
+        h2 {
           font-size: large;
           text-transform: uppercase;
           letter-spacing: 0.3mm;
@@ -151,7 +151,7 @@
     @include phone {
       .top-img-container {
         .top-logo {
-          p {
+          h2 {
             font-size: 14px;
           }
         }
@@ -182,7 +182,7 @@
     @include small {
       .top-img-container {
         .top-logo {
-          p {
+          h2 {
             margin-left: 0.5rem;
           }
           #sphere-img {

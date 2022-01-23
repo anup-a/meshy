@@ -28,7 +28,9 @@
   <div class="modal-content">
     <span class="close" on:click={handleCloseModal}>&times;</span>
     <div class="content">
-      <h2>Export</h2>
+      <h2>
+        EXPORT <p>Download Mesh Gradient</p>
+      </h2>
       <div class="range-slider-container">
         <p>HEIGHT</p>
         <div class="range-slider-grp">
@@ -135,9 +137,14 @@
     h2 {
       margin-bottom: 1rem;
       text-align: center;
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
       letter-spacing: 0.2mm;
       font-weight: 700;
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 18px;
+      }
     }
 
     .range-slider-container {

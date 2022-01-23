@@ -5,7 +5,6 @@ const downloadImage = (filename) => {
   //@ts-ignore
 
   canvas.toBlob(function (blob) {
-    console.log(blob);
     saveAs(blob, filename + ".png");
   });
 };

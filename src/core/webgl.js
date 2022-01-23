@@ -243,8 +243,7 @@ export class MiniGl {
             }
             setTopology(e = 1, t = 1) {
               const n = this;
-              console.log(n.xSegCount, n.ySegCount),
-                (n.xSegCount = e),
+              (n.xSegCount = e),
                 (n.ySegCount = t),
                 (n.vertexCount = (n.xSegCount + 1) * (n.ySegCount + 1)),
                 (n.quadCount = n.xSegCount * n.ySegCount * 2),
@@ -435,8 +434,7 @@ export class MiniGl {
     };
   }
   setSize(e = 640, t = 480, e1 = 640, t1 = 480) {
-    console.log(e, t, e1, t1),
-      (this.width = e),
+    (this.width = e),
       (this.height = t),
       (this.canvas.width = e1),
       (this.canvas.height = t1),

@@ -90,7 +90,6 @@ export class Gradient {
       }),
       e(this, "initGradient", (selector, colors) => {
         this.el = document.querySelector(selector);
-        console.log("or this every time");
         this.inputColors = colors;
         this.connect();
         return this;
@@ -116,7 +115,7 @@ export class Gradient {
         playing: true,
       }),
       document.querySelectorAll("canvas").length < 1
-        ? console.log("DID NOT LOAD HERO STRIPE CANVAS")
+        ? console.warn("DID NOT LOAD HERO STRIPE CANVAS")
         : ((this.minigl = new MiniGl(this.el, null, null, !0)),
           this.el && this.init());
     /*
@@ -153,7 +152,6 @@ export class Gradient {
         (this.xSegCount = Math.ceil(this.width * this.conf.density[0])),
       initial &&
         (this.ySegCount = Math.ceil(this.height * this.conf.density[1])),
-      console.log(this.xSegCount, this.ySegCount),
       initial && this.mesh.geometry.setTopology(this.xSegCount, this.ySegCount),
       this.mesh.geometry.setSize(this.width, this.height),
       (this.mesh.material.uniforms.u_shadow_power.value =
@@ -310,7 +308,6 @@ export class Gradient {
     this.t = 1253106 + newValue * 1000;
     this.mesh.material.uniforms.u_time.value = this.t;
     this.minigl.render();
-    console.log("rendering");
     // requestAnimationFrame(this.animate);
   }
   init() {
@@ -349,7 +346,6 @@ export class Gradient {
 
   changeGradientColors(colors) {
     if (colors) {
-      console.log("is this getting called");
       this.inputColors = colors;
       this.init();
     }
