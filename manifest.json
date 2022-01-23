@@ -1,0 +1,9 @@
+{
+    "name": "Meshy - Generate & download mesh gradients.",
+    "short_name": "MeshGradient",
+    "start_url": "/",
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen"
+  }
+  
