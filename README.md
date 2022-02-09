@@ -7,9 +7,9 @@
 
 ![Mesh Image](./public/mesh.png)
 
-# [Meshy](https://meshgradient.in)
+# Meshy
 
-`Generate beautiful mesh gradients.`
+[Generate beautiful mesh gradients.](https://meshgradient.in)
 
 Meshy is a design tool to generate beautiful & colorful mesh gradients. Generate multiple random variations of Mesh gradients along with cool color customizations. Export PNG image with custom resolution.
 
