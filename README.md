@@ -7,7 +7,7 @@
 
 ![Mesh Image](./public/mesh.png)
 
-# Meshy
+# [Meshy](https://meshgradient.in)
 
 `Generate beautiful mesh gradients.`
 
