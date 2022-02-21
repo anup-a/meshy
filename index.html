@@ -16,7 +16,7 @@
       content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
       property="og:description"
     />
-    <meta content="https://meshy.uxie.io/shot.png" property="og:image" />
+    <meta content="https://meshy.uxie.io/shot.webp" property="og:image" />
     <meta
       content="Generate & customize beautiful mesh gradients"
       property="twitter:title"
@@ -25,12 +25,13 @@
       content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
       property="twitter:description"
     />
-    <meta content="https://meshy.uxie.io/shot.png" property="twitter:image" />
+    <meta content="https://meshy.uxie.io/shot.webp" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="icon" href="/sphere.png" />
-    <link type="text/css" rel="stylesheet" href="./public/reset.css" />
+    <link rel="icon" href="/sphere.ico" />
+    <link type="text/css" rel="stylesheet" href="./reset.css" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
@@ -40,6 +41,72 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="manifest" href="/manifest.json" />
+
+    <style>
+      .main,
+      .about-section {
+        display: none;
+      }
+      .loader-container {
+        width: 100%;
+        height: 100vh;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader {
+        width: 100px;
+        height: 100px;
+        background-color: #4de6d4;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .loader:after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+      }
+
+      .loader:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+      }
+
+      .loader:before {
+        top: -40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.7);
+        animation: wave 5s linear infinite;
+      }
+
+      .loader:after {
+        top: -40px;
+        border-radius: 30%;
+        background: rgba(255, 255, 255, 0.3);
+        animation: wave 5s linear infinite;
+      }
+
+      @keyframes moveTheWave {
+        0% {
+          stroke-dashoffset: -3;
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          stroke-dashoffset: -138;
+          transform: translate3d(-90px, 0, 0);
+        }
+      }
+    </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -57,7 +124,55 @@
     </script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="main"></div>
+    <div id="about-section" class="about-section">
+      <h1>About Meshy</h1>
+      <div class="about-tool">
+        <h2>&#9680; Generate Mesh Gradients - Intro</h2>
+        <p>
+          Meshy is design tool to generate mesh gradients, with a given color
+          palette.
+          <br />
+          Each generated gradient is unique to id & color hex codes, which
+          behaves as a seed to recreate the gradients. The right columns has few
+          curated presets of gradients.
+          <br />
+          A Palette of only four colors is used to create gradient where each
+          color is associated with differnt amount of coverage area, (i.e
+          replace the colors based on the amount of area covered by original
+          colors)
+        </p>
+      </div>
+      <div class="download-section">
+        <h2>&#9680; Download Mesh Gradient PNGs - Steps</h2>
+        <p>
+          1. Click on the colors to change the selected color Palette <br />
+          2. Press Randomize Button to generate random its random variant untill
+          you find the perfect gradient <br />
+          3. Click on save & adjust width & height to download custom resolution
+          PNGs.
+        </p>
+      </div>
+    </div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      document.onreadystatechange = function () {
+        const state = document.readyState;
+        if (state === "interactive") {
+          document.querySelector(".main").style.display = "none";
+          document.querySelector(".about-section").style.display = "none";
+        } else if (state === "complete") {
+          // setTimeout can be used to test the loader.
+          // setTimeout(function () {
+          document.querySelector(".loader-container").style.display = "none";
+          document.querySelector(".main").style.display = "block";
+          document.querySelector(".about-section").style.display = "block";
+          // }, 3000)
+        }
+      };
+    </script>
   </body>
 </html>

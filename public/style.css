@@ -1,0 +1,49 @@
+#about-section {
+  width: 100%;
+  background-color: #040404;
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+.about-tool,
+.download-section,
+#about-section h1 {
+  font-family: "IBM Plex Sans";
+  color: #fff;
+  margin-top: 4rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+#about-section h1 {
+  margin-top: 5%;
+}
+
+.about-tool p,
+.download-section p {
+  margin-top: 2rem;
+  /* font-weight: 300; */
+  line-height: 1.25rem;
+
+  opacity: 0.7;
+  /* letter-spacing: 0.04rem; */
+  font-family: monospace;
+}
+
+@media screen and (max-width: 800px) {
+  .about-tool,
+  .download-section,
+  #about-section h1 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-tool,
+  .download-section,
+  #about-section h1 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}

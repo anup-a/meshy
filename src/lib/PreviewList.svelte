@@ -5,12 +5,12 @@
 
   let presetList = get(presets);
 
-  import img1 from "./../presets/preset_1.png";
-  import img2 from "./../presets/preset_2.png";
-  import img3 from "./../presets/preset_3.png";
-  import img4 from "./../presets/preset_4.png";
-  import img5 from "./../presets/preset_5.png";
-  import img6 from "./../presets/preset_6.png";
+  import img1 from "./../presets/preset_1.webp";
+  import img2 from "./../presets/preset_2.webp";
+  import img3 from "./../presets/preset_3.webp";
+  import img4 from "./../presets/preset_4.webp";
+  import img5 from "./../presets/preset_5.webp";
+  import img6 from "./../presets/preset_6.webp";
 
   const allPresetImages = [img1, img2, img3, img4, img5, img6];
 
@@ -26,6 +26,8 @@
       gradient.changePosition(newId);
     }
   };
+
+  const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
 </script>
 
 <div id="preview-list">
@@ -43,7 +45,7 @@
   {#each allPresetImages as imgSrc, idx}
     <img
       class="img-1"
-      alt="mesh img"
+      alt={`download ${colorsList[idx]} mesh gradient`}
       src={imgSrc}
       on:click={() => handleImgClick(idx)}
     />

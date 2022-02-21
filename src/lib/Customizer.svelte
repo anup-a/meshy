@@ -9,7 +9,7 @@
 
   import downloadIcon from "./../assets/download.svg";
   import beakerIcon from "./../assets/beaker.svg";
-  import meshImg from "./../assets/prism.png";
+  import meshImg from "./../assets/prism.webp";
 
   let unsubscribe;
   let currMeshId = 367;

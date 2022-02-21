@@ -32,7 +32,7 @@
         <div class="color-box-wrapper">
           <input
             type="color"
-            id="color-1"
+            id={`color-${id}`}
             class="color-box"
             value={color}
             on:change={(e) => handleColorChange(e, id)}

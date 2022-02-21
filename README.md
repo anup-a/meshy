@@ -21,7 +21,7 @@ Meshy is a design tool to generate beautiful & colorful mesh gradients. Generate
 
 ## Screenshot
 
-![screenshot](./public/shot.png)
+![screenshot](./public/shot.webp)
 
 <br />
 

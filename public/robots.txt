@@ -1,0 +1,3 @@
+Sitemap: https://meshgradient.in/sitemap.xml
+User-agent: *
+Disallow:

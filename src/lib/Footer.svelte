@@ -1,7 +1,7 @@
 <script>
-  import semiTorusImg from "./../assets/semi-torus.png";
-  import cubeImg from "./../assets/cube.png";
-  import arrowImg2 from "./../assets/Group 7_2.png";
+  import semiTorusImg from "./../assets/semi-torus.webp";
+  import cubeImg from "./../assets/cube.webp";
+  import arrowImg2 from "./../assets/Group 7_2.webp";
 </script>
 
 <div id="footer-illustration">
@@ -57,11 +57,11 @@
         p {
           font-size: smaller;
           text-align: center;
-          color: slategray;
+          color: rgb(100, 106, 112);
           margin-bottom: 4px;
 
           a {
-            color: slategray;
+            color: rgb(100, 106, 112);
           }
         }
       }
