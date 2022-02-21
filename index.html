@@ -45,7 +45,7 @@
     <style>
       .main,
       .about-section {
-        display: none;
+        /* display: none; */
       }
       .loader-container {
         width: 100%;
@@ -154,25 +154,25 @@
         </p>
       </div>
     </div>
-    <div class="loader-container">
+    <!-- <div class="loader-container">
       <div class="loader"></div>
-    </div>
+    </div> -->
     <script type="module" src="/src/main.js"></script>
     <script>
-      document.onreadystatechange = function () {
-        const state = document.readyState;
-        if (state === "interactive") {
-          document.querySelector(".main").style.display = "none";
-          document.querySelector(".about-section").style.display = "none";
-        } else if (state === "complete") {
-          // setTimeout can be used to test the loader.
-          // setTimeout(function () {
-          document.querySelector(".loader-container").style.display = "none";
-          document.querySelector(".main").style.display = "block";
-          document.querySelector(".about-section").style.display = "block";
-          // }, 3000)
-        }
-      };
+      // document.onreadystatechange = function () {
+      //   const state = document.readyState;
+      //   if (state === "interactive") {
+      //     document.querySelector(".main").style.display = "none";
+      //     document.querySelector(".about-section").style.display = "none";
+      //   } else if (state === "complete") {
+      //     // setTimeout can be used to test the loader.
+      //     // setTimeout(function () {
+      //     document.querySelector(".loader-container").style.display = "none";
+      //     document.querySelector(".main").style.display = "block";
+      //     document.querySelector(".about-section").style.display = "block";
+      //     // }, 3000)
+      //   }
+      // };
     </script>
   </body>
 </html>
