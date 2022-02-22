@@ -1,13 +1,13 @@
 <script>
-  import sphereImg from "./../assets/sphere.png";
-  import triangleImg from "./../assets/triangle.png";
+  import sphereImg from "./../assets/sphere.webp";
+  import triangleImg from "./../assets/triangle.webp";
 </script>
 
 <div>
   <div class="top-img-container">
     <div class="top-logo">
       <img id="sphere-img" src={sphereImg} alt="3d sphere" />
-      <h2>Mesh·y</h2>
+      <h2><a href="https://meshgradient.in">Mesh·y</a></h2>
     </div>
     <div class="top-right-logo">
       <a href="https://github.com/anup-a/meshy" target="_blank"
@@ -45,6 +45,12 @@
       height: 100%;
       align-items: center;
 
+      h2 {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
       @media (min-width : #{$x-large-width}) {
         top: -16px;
       }
