@@ -11,7 +11,7 @@
     </div>
     <div class="top-right-logo">
       <a href="https://github.com/anup-a/meshy" target="_blank"
-        ><span>Github</span></a
+        ><span>GitHub</span></a
       >
       <a href="https://uxie.io" class="uxie-nav">By <span>UXIE·io</span></a>
       <a
