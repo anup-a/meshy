@@ -42,6 +42,11 @@
       style="height: 50px !important;"
     /></a
   >
+  <script
+    async
+    type="text/javascript"
+    src="//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin"
+    id="_carbonads_js"></script>
   {#each allPresetImages as imgSrc, idx}
     <img
       class="img-1"
