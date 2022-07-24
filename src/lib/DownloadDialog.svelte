@@ -5,11 +5,13 @@
   import downloadImage from "./utils/downloadImage";
 
   import imgIcon from "./../assets/image.svg";
+  import { meshId } from "./store";
 
   let height = [600];
   let width = [1024];
 
   export let showDownloadModal;
+  export let currMeshId;
 
   const handleCloseModal = () => {
     showDownloadModal = false;
@@ -17,7 +19,7 @@
 
   const downloadPng = () => {
     changeCanvasSize(width[0], height[0]);
-    downloadImage("mesh");
+    downloadImage("mesh" + "-" + currMeshId);
     setTimeout(() => {
       resetCanvas();
     }, 500);

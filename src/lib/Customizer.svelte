@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<DownloadModal bind:showDownloadModal />
+<DownloadModal bind:showDownloadModal bind:currMeshId />
 
 <style lang="scss">
   #customizer {
