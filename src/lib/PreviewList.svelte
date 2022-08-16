@@ -28,6 +28,16 @@
   };
 
   const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
+
+  setTimeout(() => {
+    const carbonScript = document.createElement("script");
+    carbonScript.type = "text/javascript";
+    carbonScript.async = true;
+    carbonScript.src =
+      "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-script").appendChild(carbonScript);
+  }, 100);
 </script>
 
 <div id="preview-list">
@@ -42,11 +52,7 @@
       style="height: 50px !important;"
     /></a
   >
-  <script
-    async
-    type="text/javascript"
-    src="//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin"
-    id="_carbonads_js"></script>
+  <div id="carbon-script" />
   {#each allPresetImages as imgSrc, idx}
     <img
       class="img-1"
