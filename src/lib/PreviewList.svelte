@@ -31,14 +31,40 @@
   const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
 
   onMount(() => {
-    const carbonScript = document.createElement("script");
-    carbonScript.type = "text/javascript";
-    carbonScript.async = true;
-    carbonScript.src =
-      "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
-    carbonScript.id = "_carbonads_js";
-    document.getElementById("carbon-script").appendChild(carbonScript);
+    let removed = false;
+    const timeoutId = setTimeout(() => {
+      const carbonScript = document.createElement("script");
+      carbonScript.onerror = carbonScript.onload = function () {
+        if (removed) removeCarbonAds();
+      };
+      carbonScript.type = "text/javascript";
+      carbonScript.async = true;
+      carbonScript.src =
+        "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
+      carbonScript.id = "_carbonads_js";
+      document.getElementById("carbon-script").appendChild(carbonScript);
+    }, 100);
+    return () => {
+      clearTimeout(timeoutId);
+      removeCarbonAds();
+      removed = true;
+    };
   });
+  function removeCarbonAds() {
+    [
+      "_carbonads_js",
+      "carbonads",
+      "_carbonads_projs",
+      "_carbonads_fallbackjs",
+    ].forEach((id) => {
+      try {
+        const ad = document.getElementById(id);
+        ad.parentNode.removeChild(ad);
+      } catch (error) {
+        // ignore them
+      }
+    });
+  }
 </script>
 
 <div id="preview-list">
