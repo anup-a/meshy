@@ -11,6 +11,7 @@
   import img4 from "./../presets/preset_4.webp";
   import img5 from "./../presets/preset_5.webp";
   import img6 from "./../presets/preset_6.webp";
+  import { onMount } from "svelte";
 
   const allPresetImages = [img1, img2, img3, img4, img5, img6];
 
@@ -29,7 +30,7 @@
 
   const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
 
-  setTimeout(() => {
+  onMount(() => {
     const carbonScript = document.createElement("script");
     carbonScript.type = "text/javascript";
     carbonScript.async = true;
@@ -37,7 +38,7 @@
       "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
     carbonScript.id = "_carbonads_js";
     document.getElementById("carbon-script").appendChild(carbonScript);
-  }, 100);
+  });
 </script>
 
 <div id="preview-list">
