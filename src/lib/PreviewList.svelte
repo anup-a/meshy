@@ -11,6 +11,7 @@
   import img4 from "./../presets/preset_4.webp";
   import img5 from "./../presets/preset_5.webp";
   import img6 from "./../presets/preset_6.webp";
+  import { onMount } from "svelte";
 
   const allPresetImages = [img1, img2, img3, img4, img5, img6];
 
@@ -28,6 +29,42 @@
   };
 
   const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
+
+  onMount(() => {
+    let removed = false;
+    const timeoutId = setTimeout(() => {
+      const carbonScript = document.createElement("script");
+      carbonScript.onerror = carbonScript.onload = function () {
+        if (removed) removeCarbonAds();
+      };
+      carbonScript.type = "text/javascript";
+      carbonScript.async = true;
+      carbonScript.src =
+        "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
+      carbonScript.id = "_carbonads_js";
+      document.getElementById("carbon-script").appendChild(carbonScript);
+    }, 100);
+    return () => {
+      clearTimeout(timeoutId);
+      removeCarbonAds();
+      removed = true;
+    };
+  });
+  function removeCarbonAds() {
+    [
+      "_carbonads_js",
+      "carbonads",
+      "_carbonads_projs",
+      "_carbonads_fallbackjs",
+    ].forEach((id) => {
+      try {
+        const ad = document.getElementById(id);
+        ad.parentNode.removeChild(ad);
+      } catch (error) {
+        // ignore them
+      }
+    });
+  }
 </script>
 
 <div id="preview-list">
@@ -42,11 +79,7 @@
       style="height: 50px !important;"
     /></a
   >
-  <script
-    async
-    type="text/javascript"
-    src="//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin"
-    id="_carbonads_js"></script>
+  <div id="carbon-script" />
   {#each allPresetImages as imgSrc, idx}
     <img
       class="img-1"
