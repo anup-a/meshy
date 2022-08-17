@@ -12,9 +12,7 @@
 <div id="container">
   <float-menu id="float-menu" />
   <Main />
-  {#if innerWidth > widthBreakpoint}
-    <PreviewList />
-  {/if}
+  <PreviewList />
 </div>
 
 <style lang="scss">

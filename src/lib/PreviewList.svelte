@@ -31,25 +31,15 @@
   const colorsList = ["skyblue", "yellow", "red", "pink", "voilet", "green"];
 
   onMount(() => {
-    let removed = false;
-    const timeoutId = setTimeout(() => {
-      const carbonScript = document.createElement("script");
-      carbonScript.onerror = carbonScript.onload = function () {
-        if (removed) removeCarbonAds();
-      };
-      carbonScript.type = "text/javascript";
-      carbonScript.async = true;
-      carbonScript.src =
-        "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
-      carbonScript.id = "_carbonads_js";
-      document.getElementById("carbon-script").appendChild(carbonScript);
-    }, 100);
-    return () => {
-      clearTimeout(timeoutId);
-      removeCarbonAds();
-      removed = true;
-    };
+    const carbonScript = document.createElement("script");
+    carbonScript.type = "text/javascript";
+    carbonScript.async = true;
+    carbonScript.src =
+      "//cdn.carbonads.com/carbon.js?serve=CEAIPKJY&placement=meshgradientin";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-script").appendChild(carbonScript);
   });
+
   function removeCarbonAds() {
     [
       "_carbonads_js",

@@ -14,9 +14,6 @@
 <div id="main">
   <Header />
   <CanvasContainer />
-  {#if innerWidth <= widthBreakpoint}
-    <PreviewList />
-  {/if}
   <Footer />
 </div>
 
