@@ -143,7 +143,7 @@
         z-index: 999999;
         display: -ms-grid;
         display: grid;
-        justify-items: end;
+        justify-items: start;
         grid-auto-columns: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 8px;
@@ -194,7 +194,7 @@
       }
 
       .callout {
-        width: 300px;
+        width: 256px;
       }
     </style>
 
@@ -252,6 +252,7 @@
         data-dsads-action="close"
         data-dsads-close-container-id="ds-callout"
         class="bm-bt-close bm-shadow"
+        onclick="closePopup(event)"
         >X</a
       >
 
@@ -266,6 +267,11 @@
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
-    <script></script>
+    <script>
+      function closePopup(e) {
+        document.querySelector("#ds-callout").style.display = "none";
+        e.stopPropagation();
+      }
+    </script>
   </body>
 </html>
