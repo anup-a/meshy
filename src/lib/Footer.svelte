@@ -12,7 +12,7 @@
         <img src={arrowImg2} alt="arrow illustration" />
       </div>
       <p>
-        Made by <a href="https://anup.tech">Anup Aglawe</a>. Credits -
+        Credits -
         <a href="http://stripe.com">stripe</a>
         and <a href="https://kevinhufnagl.com/">kevinhufnagl</a> .
         <a href="https://www.freepik.com/vectors/background"
