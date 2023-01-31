@@ -1,293 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Generate Mesh Gradients | Customize & Free Export PNG</title>
-    <meta
-      content="Generate beautiful and colorful mesh gradients | Download Mesh Gradients PNG | Export mesh gradients PNG"
-      name="description"
-    />
-    <meta
-      name="keywords"
-      content="Mesh gradient, download mesh gradient, generate mesh gradient, export mesh gradient png, mesh, gradient"
-    />
-    <meta name="author" content="Anup Aglawe" />
-    <meta content="Generate Mesh Gradients" property="og:title" />
-    <meta
-      content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
-      property="og:description"
-    />
-    <meta content="https://meshy.uxie.io/shot.webp" property="og:image" />
-    <meta
-      content="Generate & customize beautiful mesh gradients"
-      property="twitter:title"
-    />
-    <meta
-      content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
-      property="twitter:description"
-    />
-    <meta content="https://meshy.uxie.io/shot.webp" property="twitter:image" />
-    <meta property="og:type" content="website" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="icon" href="/sphere.ico" />
-    <link type="text/css" rel="stylesheet" href="./public/reset.css" />
-    <link type="text/css" rel="stylesheet" href="./public/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="manifest" href="/manifest.json" />
 
-    <style>
-      .main,
-      .about-section {
-        /* display: none; */
-      }
-      .loader-container {
-        width: 100%;
-        height: 100vh;
-        background-color: #eee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<head>
+  <title>Generate Mesh Gradients | Customize & Free Export PNG</title>
+  <meta
+    content="Generate beautiful and colorful mesh gradients | Download Mesh Gradients PNG | Export mesh gradients PNG"
+    name="description" />
+  <meta name="keywords"
+    content="Mesh gradient, download mesh gradient, generate mesh gradient, export mesh gradient png, mesh, gradient" />
+  <meta name="author" content="Anup Aglawe" />
+  <meta content="Generate Mesh Gradients" property="og:title" />
+  <meta content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
+    property="og:description" />
+  <meta content="https://meshy.uxie.io/shot.webp" property="og:image" />
+  <meta content="Generate & customize beautiful mesh gradients" property="twitter:title" />
+  <meta content="Generate & customizse beautiful and colorful mesh gradients. Download Mesh Gradients & Export in PNG"
+    property="twitter:description" />
+  <meta content="https://meshy.uxie.io/shot.webp" property="twitter:image" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="icon" href="/sphere.ico" />
+  <link type="text/css" rel="stylesheet" href="./public/reset.css" />
+  <link type="text/css" rel="stylesheet" href="./public/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="manifest" href="/manifest.json" />
 
-      .loader {
-        width: 100px;
-        height: 100px;
-        background-color: #4de6d4;
-        border-radius: 50%;
-        position: relative;
-        overflow: hidden;
-      }
+  <style>
+    .main,
+    .about-section {
+      /* display: none; */
+    }
 
-      .loader:after {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-      }
+    .loader-container {
+      width: 100%;
+      height: 100vh;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .loader:before {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-      }
+    .loader {
+      width: 100px;
+      height: 100px;
+      background-color: #4de6d4;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
 
-      .loader:before {
-        top: -40px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.7);
-        animation: wave 5s linear infinite;
-      }
+    .loader:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+    }
 
-      .loader:after {
-        top: -40px;
-        border-radius: 30%;
-        background: rgba(255, 255, 255, 0.3);
-        animation: wave 5s linear infinite;
+    .loader:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+    }
+
+    .loader:before {
+      top: -40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      animation: wave 5s linear infinite;
+    }
+
+    .loader:after {
+      top: -40px;
+      border-radius: 30%;
+      background: rgba(255, 255, 255, 0.3);
+      animation: wave 5s linear infinite;
+    }
+
+    @keyframes moveTheWave {
+      0% {
+        stroke-dashoffset: -3;
+        transform: translate3d(0, 0, 0);
       }
 
-      @keyframes moveTheWave {
-        0% {
-          stroke-dashoffset: -3;
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          stroke-dashoffset: -138;
-          transform: translate3d(-90px, 0, 0);
-        }
+      100% {
+        stroke-dashoffset: -138;
+        transform: translate3d(-90px, 0, 0);
       }
+    }
 
-      .bm-better-metter-holder {
-        all: unset;
-      }
-      @media screen and (max-width: 600px) {
-        .bm-better-metter-holder {
-          visibility: hidden;
-          display: none;
-        }
-
-        .bm-bt-close {
-          visibility: hidden;
-          display: none;
-        }
-      }
-
-      .bm-better-metter-holder {
-        font-family: Arial, sans-serif;
-        position: static;
-        left: 20px;
-        bottom: 20px;
-        padding: 5px;
-        border-radius: 20px;
-        cursor: pointer;
-      }
-
-      .bm-better-metter-holder:hover {
-        background-color: #f9f9f9;
-      }
-
-      .bm-better-meter {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        z-index: 999999;
-        display: -ms-grid;
-        display: grid;
-        justify-items: start;
-        grid-auto-columns: 1fr;
-        grid-column-gap: 16px;
-        grid-row-gap: 8px;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-      }
-
-      .bm-shadow {
-        box-shadow: 6px 6px 30px -7px rgba(0, 0, 0, 0.21);
-      }
-
-      .ds-overlay-button {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 14px;
-        background-color: #6dd0fe;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 12px;
-        line-height: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        color: #391145;
-      }
-
-      .bm-bt-close {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        width: 30px;
-        height: 30px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-radius: 20px;
-        text-decoration: none;
-        font-family: Arial, sans-serif;
-        background-color: #fff;
-        cursor: pointer;
-        opacity: 0.2;
-      }
-
+    @media screen and (max-width: 1440px) {
       .callout {
-        width: 256px;
+        width: 256px !important;
       }
-    </style>
+    }
+  </style>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TLGMK83BPN"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLGMK83BPN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-      gtag("config", "G-TLGMK83BPN");
-    </script>
-  </head>
-  <body>
-    <div id="app" class="main"></div>
-    <div id="about-section" class="about-section">
-      <h1>About Meshy</h1>
-      <div class="about-tool">
-        <h2>&#9680; Generate Mesh Gradients - Intro</h2>
-        <p>
-          Meshy is design tool to generate mesh gradients, with a given color
-          palette.
-          <br />
-          Each generated gradient is unique to id & color hex codes, which
-          behaves as a seed to recreate the gradients. The Column on the right
-          has few presets of curated mesh gradients.
-          <br />
-          A Palette of only four colors is used to create gradient where each
-          color is associated with differnt amount of coverage area, (i.e
-          replace the colors amount of area covered by original colors)
-        </p>
-      </div>
-      <div class="download-section">
-        <h2>&#9680; Download Mesh Gradient PNGs - Steps</h2>
-        <p>
-          1. Click on the colors to change the selected color Palette <br />
-          2. Press Randomize Button to generate random its random variant untill
-          you find the perfect gradient <br />
-          3. Click on save & adjust width & height to download custom resolution
-          PNGs.
-        </p>
-      </div>
+    gtag("config", "G-TLGMK83BPN");
+  </script>
+</head>
+
+<body>
+  <div id="app" class="main"></div>
+  <div id="about-section" class="about-section">
+    <h1>About Meshy</h1>
+    <div class="about-tool">
+      <h2>&#9680; Generate Mesh Gradients - Intro</h2>
+      <p>
+        Meshy is design tool to generate mesh gradients, with a given color
+        palette.
+        <br />
+        Each generated gradient is unique to id & color hex codes, which
+        behaves as a seed to recreate the gradients. The Column on the right
+        has few presets of curated mesh gradients.
+        <br />
+        A Palette of only four colors is used to create gradient where each
+        color is associated with differnt amount of coverage area, (i.e
+        replace the colors amount of area covered by original colors)
+      </p>
     </div>
-    <div
-      id="ds-callout"
-      class="bm-better-meter"
-      onclick='document.location = "https://designstripe.com/mockups?utm_source=meshy&utm_medium=bettermeter&utm_campaign=mockups&utm_content=redgif"'
-    >
-      <a
-        data-dsads-action="close"
-        data-dsads-close-container-id="ds-callout"
-        class="bm-bt-close bm-shadow"
-        onclick="closePopup(event)"
-        >X</a
-      >
-
-      <div
-        onclick="dsads.loadUrl(this)"
-        class="bm-link-wrapper bm-better-metter-holder"
-      >
-        <img
-          class="callout"
-          src="https://bettermeter-s3-buckets-analytics-cache-dev.s3.us-east-1.amazonaws.com/assets/designstripe/ds_mockups_orange.gif"
-        />
-      </div>
+    <div class="download-section">
+      <h2>&#9680; Download Mesh Gradient PNGs - Steps</h2>
+      <p>
+        1. Click on the colors to change the selected color Palette <br />
+        2. Press Randomize Button to generate random its random variant untill
+        you find the perfect gradient <br />
+        3. Click on save & adjust width & height to download custom resolution
+        PNGs.
+      </p>
     </div>
-    <script type="module" src="/src/main.js"></script>
-    <script>
-      function closePopup(e) {
-        document.querySelector("#ds-callout").style.display = "none";
-        e.stopPropagation();
+  </div>
+  <script type="module" src="/src/main.js"></script>
+
+  <script>
+    (function (d, s, id, wid) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
       }
-    </script>
-    <script>
-      (function (d, s, id, wid) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.onload = function () {
-          dsads.la(wid);
-        };
-        js.src = "https://analytics-dev.bettermeter.com/analytics.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "bm-jssdk", "294995360");
-    </script>
-  </body>
+      js = d.createElement(s);
+      js.id = id;
+      js.onload = function () {
+        dsads.la(wid);
+      };
+      js.src = "https://analytics-dev.bettermeter.com/analytics.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "bm-jssdk", "294995360");
+  </script>
+</body>
+
 </html>
