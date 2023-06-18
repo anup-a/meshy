@@ -2,6 +2,7 @@
   import Main from "./lib/Main.svelte";
   import PreviewList from "./lib/PreviewList.svelte";
   import "./../lib/webcomponent/float-menu";
+  import Callout from "./lib/callout.svelte";
 
   $: innerWidth = 0;
   let widthBreakpoint = 1024;
@@ -13,6 +14,7 @@
   <float-menu id="float-menu" />
   <Main />
   <PreviewList />
+  <Callout />
 </div>
 
 <style lang="scss">
