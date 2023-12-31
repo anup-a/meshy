@@ -14,17 +14,6 @@
         ><span>Github</span></a
       >
       <a href="https://uxie.io" class="uxie-nav">By <span>UXIE·io</span></a>
-      <a
-        class="buy-coffee"
-        href="https://www.buymeacoffee.com/anup"
-        target="_blank"
-        style="height: 40px !important;"
-        ><img
-          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-          alt="Buy Me A Coffee"
-          style="height: 40px !important;"
-        /></a
-      >
       <img id="triangle-img" src={triangleImg} alt="3d sphere" />
     </div>
   </div>
@@ -66,7 +55,7 @@
         }
         #sphere-img {
           margin-left: 2rem;
-          height: 3.5rem;
+          height: 2rem;
         }
       }
 
@@ -77,7 +66,7 @@
         a {
           text-decoration: none;
           color: black;
-          font-size: large;
+          font-size: 14px;
           letter-spacing: 0.3mm;
           margin-right: 1.5rem;
           z-index: 1;
@@ -102,7 +91,7 @@
 
         #triangle-img {
           margin-right: 2rem;
-          height: 3rem;
+          height: 2rem;
           transform: rotate(27deg);
         }
       }
@@ -116,7 +105,7 @@
       padding-bottom: 0.5rem;
       height: 100%;
       width: 100%;
-      font-size: xx-large;
+      font-size: x-large;
       letter-spacing: 0.1mm;
       font-weight: 600;
       margin-bottom: 1.5rem;

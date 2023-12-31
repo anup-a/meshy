@@ -2,6 +2,7 @@
   import Main from "./lib/Main.svelte";
   import PreviewList from "./lib/PreviewList.svelte";
   import "./../lib/webcomponent/float-menu";
+  import "./../lib/webcomponent/banner";
 
   $: innerWidth = 0;
   let widthBreakpoint = 1024;
@@ -9,6 +10,7 @@
 
 <svelte:window bind:innerWidth />
 
+<banner-nav></banner-nav>
 <div id="container">
   <float-menu id="float-menu" />
   <Main />

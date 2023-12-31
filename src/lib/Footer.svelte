@@ -6,11 +6,11 @@
 
 <div id="footer-illustration">
   <div id="footer-left">
-    <img id="torus-img" src={semiTorusImg} alt="semi torus" />
+    <!-- <img id="torus-img" src={semiTorusImg} alt="semi torus" /> -->
     <div id="footer-center">
-      <div class="arrow">
+      <!-- <div class="arrow">
         <img src={arrowImg2} alt="arrow illustration" />
-      </div>
+      </div> -->
       <p>
         Credits -
         <a href="http://stripe.com">stripe</a>
@@ -21,9 +21,9 @@
       </p>
     </div>
   </div>
-  <div id="footer-right">
+  <!-- <div id="footer-right">
     <img src={cubeImg} alt="semi torus" />
-  </div>
+  </div> -->
 </div>
 
 <style lang="scss">
