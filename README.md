@@ -1,4 +1,7 @@
 
+Just Launched, checkout 🚀 - [Creatica - Generate awesome vector svg backgrounds and patterns](https://creatica.app)
+
+<br/>
 <img src="./public/logo.png" alt="logo" width="200"/> <a href="https://www.buymeacoffee.com/anup" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" align="right" style="height: 60px !important;width: 217px !important;" ></a>
 
 
