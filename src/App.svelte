@@ -37,7 +37,7 @@
       height: 0;
       display: block;
       position: absolute;
-      top: 12%;
+      top: 20%;
     }
   }
 </style>
