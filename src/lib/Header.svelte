@@ -14,7 +14,6 @@
         ><span>Github</span></a
       >
       <a href="https://uxie.io" class="uxie-nav">By <span>UXIE·io</span></a>
-      <img id="triangle-img" src={triangleImg} alt="3d sphere" />
     </div>
   </div>
   <h1 class="heading-text">Generate beautiful mesh gradients</h1>

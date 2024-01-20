@@ -69,16 +69,14 @@
     </div>
   </div>
   <ColorsContainer bind:genBtnText bind:highlightGenBtn />
-  <div class="img-container">
-    <img src={meshImg} alt="mesh" id="mesh-img" />
-  </div>
+
   <div class="btn-container">
     <button class="btn save-btn" on:click={handleSaveBtnClick}>
       <p>Save</p>
       <img src={downloadIcon} alt="download icon" width="20px" />
     </button>
     <div class={highlightGenBtn && "highlight-btn"}>
-      <button class="btn gen-btn " on:click={handleGenerateMesh}
+      <button class="btn gen-btn" on:click={handleGenerateMesh}
         ><p>{genBtnText}</p>
         <img src={beakerIcon} alt="download icon" width="20px" />
       </button>
