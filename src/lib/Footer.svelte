@@ -1,9 +1,3 @@
-<script>
-  import semiTorusImg from "./../assets/semi-torus.webp";
-  import cubeImg from "./../assets/cube.webp";
-  import arrowImg2 from "./../assets/Group 7_2.webp";
-</script>
-
 <div id="footer-illustration">
   <div id="footer-left">
     <!-- <img id="torus-img" src={semiTorusImg} alt="semi torus" /> -->
@@ -11,14 +5,9 @@
       <!-- <div class="arrow">
         <img src={arrowImg2} alt="arrow illustration" />
       </div> -->
-      <p>
-        Credits -
-        <a href="http://stripe.com">stripe</a>
-        and <a href="https://kevinhufnagl.com/">kevinhufnagl</a> .
-        <a href="https://www.freepik.com/vectors/background"
-          >Vectors by - pikisuperstar</a
-        >
-      </p>
+      <a href="https://creatica.app">
+        Generate awesome svg vector backgrounds with Creatica
+      </a>
     </div>
   </div>
   <!-- <div id="footer-right">
@@ -37,11 +26,6 @@
       display: flex;
       flex-direction: column;
 
-      #torus-img {
-        width: 4rem;
-        margin-left: 2rem;
-      }
-
       #footer-center {
         width: 100%;
         height: 100%;
@@ -54,7 +38,7 @@
           width: 100%;
         }
 
-        p {
+        a {
           font-size: smaller;
           text-align: center;
           color: rgb(100, 106, 112);
